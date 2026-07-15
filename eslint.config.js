@@ -131,6 +131,22 @@ export default defineConfig(
 					]
 				}
 			],
+		},
+	},
+	// Shed license header — enforced only on our own source (src/).
+	// Vendored / Microsoft-authored extensions, build tooling, and test
+	// fixtures retain their upstream headers and are intentionally excluded.
+	{
+		files: [
+			'src/**/*.ts',
+			'src/**/*.tsx',
+			'src/**/*.mts',
+			'src/**/*.cts',
+		],
+		plugins: {
+			'header': pluginHeader,
+		},
+		rules: {
 			'header/header': [
 				2,
 				'block',
@@ -141,7 +157,7 @@ export default defineConfig(
 					' *--------------------------------------------------------------------------------------------'
 				]
 			]
-		},
+		}
 	},
 	// TS
 	{

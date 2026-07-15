@@ -59,7 +59,7 @@ declare module 'vscode' {
 		 * @param range The range to anchor the comment to.
 		 * @param body The comment text.
 		 */
-		// eslint-disable-next-line local/vscode-dts-provider-naming
+		// eslint-disable-next-line local/shed-dts-provider-naming
 		addComment(range: Range, body: string): void;
 
 		/**
@@ -68,7 +68,7 @@ declare module 'vscode' {
 		 *
 		 * @param id The {@link AgentEditorComment.id id} of the comment to delete.
 		 */
-		// eslint-disable-next-line local/vscode-dts-provider-naming
+		// eslint-disable-next-line local/shed-dts-provider-naming
 		deleteComment(id: string): void;
 	}
 
