@@ -1017,7 +1017,7 @@ suite('vscode API - window', () => {
 
 	test('createStatusBar', async function () {
 		const statusBarEntryWithoutId = window.createStatusBarItem(StatusBarAlignment.Left, 100);
-		assert.strictEqual(statusBarEntryWithoutId.id, 'vscode.vscode-api-tests');
+		assert.strictEqual(statusBarEntryWithoutId.id, 'vscode.shed-api-tests');
 		assert.strictEqual(statusBarEntryWithoutId.alignment, StatusBarAlignment.Left);
 		assert.strictEqual(statusBarEntryWithoutId.priority, 100);
 		assert.strictEqual(statusBarEntryWithoutId.name, undefined);

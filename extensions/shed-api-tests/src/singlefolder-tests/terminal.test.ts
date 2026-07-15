@@ -14,7 +14,7 @@ import { assertNoRpc, poll } from '../utils';
 
 	suiteSetup(async () => {
 		// Trigger extension activation and grab the context as some tests depend on it
-		await extensions.getExtension('vscode.vscode-api-tests')?.activate();
+		await extensions.getExtension('vscode.shed-api-tests')?.activate();
 		extensionContext = global.testExtensionContext;
 
 		const config = workspace.getConfiguration('terminal.integrated');

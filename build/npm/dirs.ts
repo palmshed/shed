@@ -49,7 +49,7 @@ export const dirs = [
 	'extensions/tunnel-forwarding',
 	'extensions/terminal-suggest',
 	'extensions/typescript-language-features',
-	'extensions/vscode-api-tests',
+	'extensions/shed-api-tests',
 	'extensions/vscode-colorize-tests',
 	'extensions/vscode-colorize-perf-tests',
 	'extensions/shed-test-resolver',
