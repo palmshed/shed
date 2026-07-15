@@ -67,21 +67,11 @@ export function spawnTsgo(projectPath: string, config: { taskName: string; noEmi
 
 				runReporter(lines.join('\n'));
 
-				if (code === 0) {
-					Promise.resolve(onComplete?.()).then(() => resolve(), reject);
-				} else {
-					const command = `${process.execPath} ${args.map(a => JSON.stringify(a)).join(' ')}`;
-					const diagnostics = [
-						`tsgo exited with code ${code ?? 'unknown'}`,
-						`command: ${command}`,
-						`cwd: ${root}`,
-						`stdout (${stdoutData.length} bytes):`,
-						stdoutData,
-						`stderr (${stderrData.length} bytes):`,
-						stderrData,
-					].join('\n');
-					reject(new Error(diagnostics));
-				}
+			if (code === 0) {
+				Promise.resolve(onComplete?.()).then(() => resolve(), reject);
+			} else {
+				reject(new Error(`tsgo exited with code ${code ?? 'unknown'}`));
+			}
 			});
 
 		child.on('error', err => {
