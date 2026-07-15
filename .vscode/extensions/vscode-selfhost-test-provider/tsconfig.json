@@ -1,0 +1,17 @@
+{
+	"extends": "../../../extensions/tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"types": [
+			"node",
+			"mocha",
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../../src/shed-dts/vscode.d.ts",
+		"../../../src/shed-dts/vscode.proposed.testObserver.d.ts",
+		"../../../src/shed-dts/vscode.proposed.testRelatedCode.d.ts"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"types": [
+			"node"
+		],
+		"lib": [
+			"WebWorker"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../src/shed-dts/vscode.d.ts",
+		"../../src/shed-dts/vscode.proposed.tunnels.d.ts",
+		"../../src/shed-dts/vscode.proposed.resolvers.d.ts"
+	]
+}

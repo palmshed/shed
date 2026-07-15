@@ -1,0 +1,23 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"esModuleInterop": true,
+		"types": [
+			"node"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../src/shed-dts/vscode.d.ts",
+		"../../src/shed-dts/vscode.proposed.codeActionAI.d.ts",
+		"../../src/shed-dts/vscode.proposed.codeActionRanges.d.ts",
+		"../../src/shed-dts/vscode.proposed.multiDocumentHighlightProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.workspaceTrust.d.ts",
+		"../../src/shed-dts/vscode.proposed.editorHoverVerbosityLevel.d.ts",
+	]
+}

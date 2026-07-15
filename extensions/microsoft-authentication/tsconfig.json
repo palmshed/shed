@@ -1,0 +1,25 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": false,
+		"skipLibCheck": true,
+		"types": [
+			"node",
+			"mocha"
+		],
+		"typeRoots": [
+			"./node_modules/@types",
+			"../../node_modules/@types"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../src/shed-dts/vscode.d.ts",
+		"../../src/shed-dts/vscode.proposed.nativeWindowHandle.d.ts",
+		"../../src/shed-dts/vscode.proposed.authIssuers.d.ts",
+		"../../src/shed-dts/vscode.proposed.authenticationChallenges.d.ts"
+	]
+}

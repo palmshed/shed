@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>shed</title>
+    <meta name="description" content="shed ~ a code editor built on VS Code." />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <nav>
+      <span class="nav-mark">shed</span>
+      <ul class="nav-links" id="nav">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./docs.html">Docs</a></li>
+        <li><a href="./experience.html">Journal</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4"/>
+            <path d="M13 7.14A5.82 5.82 0 0 1 16.5 6c3.04 0 5.5 2.24 5.5 5h-3l-1-1-1 1h-3"/>
+            <path d="M5.89 9.71c-2.15 2.15-2.3 5.47-.35 7.43l4.24-4.25.7-.7.71-.71 2.12-2.12c-1.95-1.96-5.27-1.8-7.42.35"/>
+            <path d="M11 15.5c.5 2.5-.17 4.5-1 6.5h4c2-5.5-.5-12-1-14"/>
+          </svg>
+          <span>shed</span>
+        </div>
+        <h1>A code editor built on VS Code</h1>
+        <p>Terminal, extensions, and debugging support. Web and desktop builds.</p>
+        <div class="hero-actions">
+          <a href="./docs.html">Get started</a>
+          <a href="https://github.com/palmshed/shed">Project on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <section>
+        <h2>Getting started</h2>
+        <p>Clone the repo and build from source.</p>
+        <pre><code>git clone shed
+cd shed
+npm install
+node build/npm/postinstall.ts
+npx gulp vscode-darwin-arm60</code></pre>
+        <p class="subtext">The built app will be in <code>out/Shed-darwin-arm64/Shed.app</code>.</p>
+      </section>
+
+      <section>
+        <h2>Run in the browser</h2>
+        <p>Shed can run as a web app:</p>
+        <pre><code>npx gulp vscode-web
+node resources/server/web-dev.js</code></pre>
+        <p>Open <code>http://localhost:8000</code>.</p>
+      </section>
+
+      <section>
+        <h2>Next</h2>
+        <p>Read the <a href="./docs.html">docs</a>, check the <a href="./experience.html">journal</a>, or get <a href="./support.html">support</a>.</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Palmshed</p>
+      <ul class="footer-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./docs.html">Docs</a></li>
+        <li><a href="./experience.html">Journal</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      (function() {
+        var toggle = document.querySelector('.mobile-menu-toggle');
+        var nav = document.getElementById('nav');
+        if (!toggle || !nav) return;
+        function sync() { toggle.setAttribute('aria-expanded', nav.classList.contains('active')); }
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          nav.classList.toggle('active');
+          sync();
+        });
+        document.addEventListener('click', function(e) {
+          if (nav.classList.contains('active') && !nav.contains(e.target) && e.target !== toggle) {
+            nav.classList.remove('active');
+            sync();
+          }
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            sync();
+            toggle.focus();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

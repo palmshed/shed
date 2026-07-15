@@ -1,0 +1,24 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"lib": [
+			"ES2024",
+			"webworker"
+		],
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"types": [
+			"node"
+		],
+		"typeRoots": [
+			"../node_modules/@types"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../../src/shed-dts/vscode.d.ts",
+		"../../../src/shed-dts/vscode.proposed.extensionsAny.d.ts"
+	]
+}

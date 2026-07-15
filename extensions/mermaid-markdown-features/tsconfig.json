@@ -1,0 +1,22 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"types": [
+			"node"
+		],
+		"typeRoots": [
+			"./node_modules/@types"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"../../src/shed-dts/vscode.d.ts",
+		"../../src/shed-dts/vscode.proposed.chatOutputRenderer.d.ts",
+		"../../src/shed-dts/vscode.proposed.chatParticipantAdditions.d.ts",
+		"../../src/shed-dts/vscode.proposed.languageModelThinkingPart.d.ts",
+		"../../src/shed-dts/vscode.proposed.chatParticipantPrivate.d.ts",
+		"../../src/shed-dts/vscode.proposed.languageModelProxy.d.ts"
+	]
+}

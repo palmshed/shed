@@ -1,0 +1,7 @@
+{
+	"extends": "./tsconfig.shed-dts.json",
+	"include": [
+		"shed-dts/vscode.d.ts",
+		"shed-dts/vscode.proposed.*.d.ts",
+	]
+}

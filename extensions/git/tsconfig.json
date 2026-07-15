@@ -1,0 +1,38 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./out",
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"skipLibCheck": true
+	},
+	"include": [
+		"src/**/*",
+		"../../src/shed-dts/vscode.d.ts",
+		"../../src/shed-dts/vscode.proposed.agentSessionsWorkspace.d.ts",
+		"../../src/shed-dts/vscode.proposed.canonicalUriProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.findFiles2.d.ts",
+		"../../src/shed-dts/vscode.proposed.editSessionIdentityProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.envIsConnectionMetered.d.ts",
+		"../../src/shed-dts/vscode.proposed.quickDiffProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.quickPickSortByLabel.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmActionButton.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmArtifactProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmHistoryProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmProviderOptions.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmSelectedProvider.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmValidation.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmMultiDiffEditor.d.ts",
+		"../../src/shed-dts/vscode.proposed.scmTextDocument.d.ts",
+		"../../src/shed-dts/vscode.proposed.statusBarItemTooltip.d.ts",
+		"../../src/shed-dts/vscode.proposed.taskRunOptions.d.ts",
+		"../../src/shed-dts/vscode.proposed.tabInputMultiDiff.d.ts",
+		"../../src/shed-dts/vscode.proposed.tabInputTextMerge.d.ts",
+		"../../src/shed-dts/vscode.proposed.textEditorDiffInformation.d.ts",
+		"../../src/shed-dts/vscode.proposed.timeline.d.ts",
+		"../../src/shed-dts/vscode.proposed.workspaceTrust.d.ts",
+		"../types/lib.textEncoder.d.ts"
+	]
+}
