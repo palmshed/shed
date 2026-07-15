@@ -317,7 +317,7 @@ const nativeExtensions = [
 
 const excludedExtensions = [
 	'copilot',
-	'vscode-api-tests',
+	'shed-api-tests',
 	'vscode-colorize-tests',
 	'vscode-colorize-perf-tests',
 	'vscode-test-resolver',
